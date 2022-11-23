@@ -1,6 +1,6 @@
 # MineriaMultiagentesAGRO
 
-##Hipótesis:
+# Hipótesis:
 
   1ª. La pandemia por la covid-19 provocó escasez de verduras y hortalizas en puntos clave de la pandemia.
 
