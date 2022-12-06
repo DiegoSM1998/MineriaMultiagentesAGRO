@@ -1,8 +1,4 @@
 
-"""
-# Filename: run_selenium.py
-"""
-
 ## Run selenium and chrome driver to scrape data from cloudbytes.dev
 import time
 import os.path
