@@ -9,3 +9,6 @@
   3ª. Los super alimentos han influido en la reducción de mortalidad por la covid-19 durante las olas.
 
   4ª. En las comunidades donde es rica la ingesta de verduras y frutas hubo una menor tasa de mortalidad por covid. 
+  
+  
+  Entrega 2:https://docs.google.com/document/d/1bCFaa0zZXD2eQbbQ3_gkcq5iL97n-F_WMWl0Ljdnee8/edit
