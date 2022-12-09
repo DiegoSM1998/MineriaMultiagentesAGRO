@@ -98,30 +98,6 @@ for producto in productos:
     print("\n")
 
 
-
-
-def misco():
-    tbody=browser.find_element(By.XPATH,"//tbody")
-    tds=tbody.find_elements(By.XPATH, "//td")
-    for td in tds:
-        if((td.text) != ""):
-            print(td.text)
-
-
-    tablaf=[]
-    tabla=browser.find_elements(By.XPATH,'''//span[@class="tabla_texto_normal_n2"]''')
-    for t in tabla:
-        tablaf.append(t.text)
-    tabla1=browser.find_elements(By.XPATH,'''//span[@class="tabla_texto_normal_n2"]''')
-    for t1 in tabla1:
-        tablaf.append(t1.text)
-
-    tabla1=browser.find_elements(By.XPATH,'''//span[@class="tabla_texto_normal"]''')
-    for t1 in tabla1:
-        tablaf.append(t1.text)
-
-    print(tablaf)
-
 #Wait for 10 seconds
 time.sleep(1)
 browser.quit()
