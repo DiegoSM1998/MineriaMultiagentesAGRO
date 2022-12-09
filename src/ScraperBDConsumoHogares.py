@@ -9,6 +9,18 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 
+def guardarData(productos, datosTropel, fecha, ccaa):
+    x=6
+    nombrefichero='Dataset1.1.-DatosConsumoAlimentario_'+fecha+"_"+ccaa+'.txt'
+    f = open(nombrefichero, 'w')
+    for producto in productos:
+        f.write(fecha+"|"+ccaa+"|"+producto+"|")
+        for i in range(x-6,x):
+            f.write(datosTropel[i]+"|")
+        x+=6
+        f.write("|\n")
+    f.close()
+
 ## Setup chrome options
 chrome_options = Options()
 chrome_options.add_argument("--headless") # Ensure GUI is off
@@ -18,35 +30,22 @@ chrome_options.add_argument("--no-sandbox")
 homedir = os.path.expanduser("~")
 webdriver_service = Service(f"{homedir}/chromedriver/stable/chromedriver")
 
-# Choose Chrome Browser
+# Choose Chrome Browser ubuntu
 browser = webdriver.Chrome(service=webdriver_service, options=chrome_options)
 
-# Get page
 browser.get("https://www.mapa.gob.es/app/consumo-en-hogares/consulta11.asp")
 
-bolGrupoProductos=False
-bolPeriodoConsulta=False
-bolIntervalo=False
-bolComunidad=False
-
-forms = browser.find_element(By.XPATH, "//form")
-fieldsets = forms.find_elements(By.XPATH,"//fieldset")
-
-for fieldset in fieldsets:
-        select= fieldset.find_element(By.XPATH,"//select")
-        all_options=select.find_elements(By.TAG_NAME,"option")
-        if(bolGrupoProductos==False):
-            print("Selecciona el producto:")
-            for option in all_options:
-                print(str(option.get_attribute("value"))+": "+str(option.text))
-            producto = input("Escriba el número de producto:")
-            while( int(producto)<1 or int(producto)>28):
-                producto = input("Escriba un número del 1 al 28 por favor:")
-            for option in all_options:
-                if(producto == option.get_attribute("value")):
-                    option.click()
-                    print("Producto seleccionado: "+str(option.text))
-                    bolGrupoProductos=True
+grupoProductos= browser.find_element(By.XPATH, '''//select[@name="grupo"]''')
+opcionesProductos=grupoProductos.find_elements(By.TAG_NAME,"option")
+for option in opcionesProductos:
+    print(str(option.get_attribute("value"))+": "+str(option.text))
+productoSeleccionado = input("Escriba el número del grupo de alimentos:")
+while( int(productoSeleccionado)<1 or int(productoSeleccionado)>96):
+    periodoSeleccionado = input("Escriba un número del 1 al 28 por favor:")
+for option in opcionesProductos:
+    if(productoSeleccionado == option.get_attribute("value")):
+        option.click()
+        print("Grupo de productos seleccionados: "+str(option.text))
 
 periodo= browser.find_element(By.XPATH, '''//select[@name="periodo"]''')
 opcionesPeriodo=periodo.find_elements(By.TAG_NAME,"option")
@@ -59,8 +58,8 @@ for option in opcionesPeriodo:
     if(periodoSeleccionado == option.get_attribute("value")):
         option.click()
         print("Periodo seleccionado: "+str(option.text))
-        bolGrupoProductos=True
-            
+        fecha=str(option.text)
+                 
 comunidades=browser.find_element(By.XPATH, '''//select[@name="CCAA"]''')
 opcionesComunidad=comunidades.find_elements(By.TAG_NAME,"option")
 for option in opcionesComunidad:
@@ -72,14 +71,14 @@ for option in opcionesComunidad:
     if(comunidadesSeleccionado == option.get_attribute("value")):
         option.click()
         print("CCAA seleccionada: "+str(option.text))
-        bolGrupoProductos=True
+        ccaa=str(option.text)
 
-timeout=3
 boton=browser.find_element(By.XPATH, '//*[@id="boton1"]')
 boton.send_keys(Keys.ENTER)
 
 productoCol=browser.find_elements(By.XPATH,('''//tbody/tr/th/span'''))
 datosCols=browser.find_elements(By.XPATH,('''//tbody/tr/td[2]/span[@class="tabla_texto_normal"]'''))
+
 productos=[]
 productos.append("Producto")
 for producto in productoCol:
@@ -97,7 +96,6 @@ for producto in productos:
     x+=6
     print("\n")
 
+guardarData(productos,datosTropel, fecha, ccaa)
 
-#Wait for 10 seconds
-time.sleep(1)
 browser.quit()
