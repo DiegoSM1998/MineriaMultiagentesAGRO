@@ -1,9 +1,20 @@
 FROM python:3.8-slim
 
-RUN apt-get update && apt-get install -y chromium
+RUN apt-get update && apt-get install unzip && apt-get install -y libpq-dev
+RUN apt-get update && \
+    apt-get -y install gcc mono-mcs && \
+    rm -rf /var/lib/apt/lists/*
 
-RUN pip install selenium
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY scrapperConsumo.py /app/scrapperConsumo.py
+COPY menu.py /app/menu.py
 
-CMD ["python", "/app/scrapperConsumo.py"]
+COPY Dataset1.-DatosConsumoAlimentarioMAPAporCCAA.txt data.txt
+
+
+
+COPY sender.py /app/sender.py
+
+CMD ["python", "/app/menu.py"]
+
