@@ -1,0 +1,9 @@
+FROM python:3.8-slim
+
+RUN apt-get update && apt-get install -y chromium
+
+RUN pip install selenium
+
+COPY Scrapper.py /app/Scrapper.py
+
+CMD ["python", "/app/Scrapper.py"]
