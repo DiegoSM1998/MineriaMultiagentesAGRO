@@ -63,12 +63,12 @@ if __name__ == "__main__":
             sleep(0.25)
 
 def guardarData(productos, datosTropel, fecha, ccaa, desde):
-    x=6
+    x=7
     nombrefichero='Dataset1.1.-DatosConsumoAlimentario_'+str(desde)+'-2020.txt'
     f = open(nombrefichero, 'a')
     if os.stat(nombrefichero).st_size == 0:
         f.write("Año|Mes|CCAA|Producto|")
-        for i in range(x-6,x):
+        for i in range(x-7,x):
             f.write(datosTropel[i]+"|")
         f.write("|\n")
     x+=6
