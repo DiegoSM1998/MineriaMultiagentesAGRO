@@ -1,0 +1,9 @@
+FROM python:3.8-slim
+
+RUN apt-get update && apt-get install -y chromium
+
+RUN pip install selenium
+
+COPY scrapperConsumo.py /app/scrapperConsumo.py
+
+CMD ["python", "/app/scrapperConsumo.py"]
