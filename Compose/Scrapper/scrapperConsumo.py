@@ -1,6 +1,7 @@
 ## Run selenium and chrome driver to scrape data
 import time
 import os.path
+import subirData as sb
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -23,6 +24,7 @@ def guardarData(productos, datosTropel, fecha, ccaa):
         x+=6
         f.write("|\n")
     f.close()
+    sb.sender(nombrefichero)
 
 ## Setup chrome options
 chrome_options = Options()
@@ -100,5 +102,6 @@ for producto in productos:
     print("\n")
 
 guardarData(productos,datosTropel, fecha, ccaa)
+
 
 browser.quit()
