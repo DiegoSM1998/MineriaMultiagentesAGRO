@@ -1,0 +1,9 @@
+FROM python:3.8-slim
+
+RUN apt-get update && apt-get install -y libpq-dev
+
+COPY /subir_data/requirements.txt /app/requirements.txt
+RUN pip install -r /app/requirements.txt
+
+COPY /subir_data/subir_data.py /app/subir_data.py
+CMD ["python", "/app/subir_data.py"]

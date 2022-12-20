@@ -1,0 +1,9 @@
+FROM python:3.8-slim
+
+RUN apt-get update && apt-get install -y chromium
+
+COPY /scrapper_ccaa/requirements.txt /app/requirements.txt
+RUN pip install -r /app/requirements.txt
+
+COPY /scrapper_ccaa/scrapper_ccaa.py /app/scrapper_ccaa.py
+CMD ["python", "/app/scrapper_ccaa.py"]

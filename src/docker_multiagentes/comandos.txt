@@ -1,0 +1,35 @@
+Levantamos postgres y adminer:
+docker compose -f \compose_postgres\docker_compose.yml up
+
+SCRAPPERS:
+Volumen compartido: 
+docker volume create vcompartido
+
+scrapper iterativo:
+docker build -f scrapper_iterativo/Dockerfile.txt -t scrapper_iterativo .
+docker run --name scrapper_iterativo_docker -it -v vcompartido:/data scrapper_iterativo
+SUBIR DATABASE ITERATIVA: docker cp data_iterativo.txt scrapper_iterativo_docker:/data
+
+scrapper ccaa:
+docker build -f scrapper_ccaa/Dockerfile.txt -t scrapper_ccaa .
+docker run --name scrapper_ccaa_docker -it -v vcompartido:/data scrapper_ccaa
+
+scrapper superalimentos:
+docker build -f scrapper_superalimentos/Dockerfile.txt -t scrapper_superalimentos .
+docker run --name scrapper_superalimentos_docker -it -v vcompartido:/data scrapper_superalimentos
+
+Subir data:
+docker build -f subir_data/Dockerfile.txt -t subir_data .
+docker run --name subir_data_docker -it -v vcompartido:/data subir_data
+
+Pandas:
+docker build -f pandas_transform/Dockerfile.txt -t pandas_transform .
+docker run --name pandas_transform_docker -it pandas_transform
+
+Pandera:
+docker build -f pandera_expectations/Dockerfile.txt -t pandera_expectations .
+docker run --name pandera_expectations_docker -it pandera_expectations
+
+Modelo de regresion:
+docker build -f linear_regression/Dockerfile.txt -t linear_regression .
+docker run --name linear_regression_model -it linear_regression

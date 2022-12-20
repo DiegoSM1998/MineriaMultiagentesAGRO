@@ -1,0 +1,9 @@
+FROM python:3.8-slim
+
+RUN apt-get update && apt-get install -y libpq-dev
+
+COPY /pandera_expectations/requirements.txt /app/requirements.txt
+RUN pip install -r /app/requirements.txt
+
+COPY /pandera_expectations/pandera_expectations.py /app/pandera_expectations.py
+CMD ["python", "/app/pandera_expectations.py"]

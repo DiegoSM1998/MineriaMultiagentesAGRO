@@ -1,0 +1,9 @@
+FROM python:3.8-slim
+
+RUN apt-get update && apt-get install -y libpq-dev
+
+COPY /linear_regression/requirements.txt /app/requirements.txt
+RUN pip install -r /app/requirements.txt
+
+COPY /linear_regression/linear_regression.py /app/linear_regression.py
+CMD ["python", "/app/linear_regression.py"]
