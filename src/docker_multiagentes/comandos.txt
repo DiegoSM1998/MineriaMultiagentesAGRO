@@ -32,4 +32,4 @@ docker run --name pandera_expectations_docker -it pandera_expectations
 
 Modelo de regresion:
 docker build -f linear_regression/Dockerfile.txt -t linear_regression .
-docker run --name linear_regression_model -it linear_regression
+docker run --name linear_regression_model -it -v vcompartido:/data linear_regression
