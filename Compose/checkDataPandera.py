@@ -11,8 +11,6 @@ engine = create_engine("postgresql://docker:docker@localhost/AGROdb")
 query = '''SELECT * FROM "Data1.Ampli.processed"'''
 df =pd.read_sql(query, engine)
 
-#Año|Mes|CCAA|Producto||Volumen (miles de kg)|Valor (miles de €)|Precio medio kg|Penetración (%)|Consumo per capita|Gasto per capita||
-
 meses = ["Enero", "Febrero", "Marzo", "Abril" , "Mayo" , "Junio", "Julio",
          "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 #ccaa=["Total Nacioal", "Andalucía", "Aragón", "Asturias", "Baleares",
