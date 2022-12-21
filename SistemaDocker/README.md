@@ -1,6 +1,8 @@
 ##    Instrucciones
 ### 1º. Ejecutar docker-Desktop
 ### 2º. lanzar servidor: docker compose -f .\docker_compose.yml up 
+(Desde el navegador puedes acceder a las tablas postgresqul en la dirección localhost:8080, debereas introducir los datos de acceso que estan disponibles en el archivo docker_compose.yml)
+![Login](https://github.com/DiegoSM1998/MineriaMultiagentesAGRO/blob/main/SistemaDocker/login.png)
 ### Ahora puedes accedr a las funciones o modificarlas en los ".py" de cada carpeta, siendo estas:
 ###   1.- Subir datasets masivos a postgresql (Entrar en el fichero ./pythonSubirData y seguir instrucciones)
 ###   2.- Descargar datos a medida a traves de escraper y subirlos postgresql (Entrar en el fichero ./selenium y seguir instrucciones)
