@@ -21,7 +21,7 @@ def chooseTable():
     contador=0
     tablas=[]
     for name in df.values:
-        tablas.append((str(name).strip('''['']''')))
+        tablas.append(str(name).strip('''['']'''))
     elegida=str(tablas[int(eleccion)])
     print("Tabla seleccionada: "+elegida)
     return elegida
