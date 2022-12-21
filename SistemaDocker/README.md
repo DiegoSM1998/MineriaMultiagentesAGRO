@@ -10,4 +10,7 @@
 ###   4.- Comprobar la calidad de los datos de las tablas en la base de datos (Entrar en el fichero ./pythonCheckPandera y seguir instrucciones)
 ###   5.- Usar el modelo de regresión lineal (Entrar en el fichero ./modelo y seguir instrucciones)
 (Una vez creadas las imagenes podras ejecutarlas e interactuar entre ellas gracias a que todas se comunican con la base de datos AGROdb)
+_________________________________________________________________________________________________________________________________________________________________________
+
+## Diagrama Arquitectura
 ![Diagrama](https://github.com/DiegoSM1998/MineriaMultiagentesAGRO/blob/main/SistemaDocker/diagrama.png)
