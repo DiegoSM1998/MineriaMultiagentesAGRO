@@ -2,6 +2,7 @@
 import time
 import os.path
 import pandas as pd
+from sqlalchemy import create_engine
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
