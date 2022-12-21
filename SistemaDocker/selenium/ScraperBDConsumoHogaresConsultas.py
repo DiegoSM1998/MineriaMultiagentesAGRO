@@ -1,8 +1,10 @@
-## Run selenium and chrome driver to scrape data
+#!/usr/bin/python3
+# -- coding: utf-8 --
+'''escraper selenium data1 consultas'''
+
 import time
 import os.path
 import pandas as pd
-from sqlalchemy import create_engine
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -10,10 +12,12 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
+from sqlalchemy import create_engine
+
 
 def guardarData(productos, datosTropel, fecha, ccaa):
     x=6
-    nombrefichero='Dataset1.1.-DatosConsumoAlimentario_'+fecha+"_"+ccaa+'.raw'
+    nombrefichero='Data1.Ampli.'+fecha+"."+ccaa+'.raw'
     f = open(nombrefichero, 'w')
     for producto in productos:
         f.write(fecha+"|"+ccaa+"|"+producto+"|")
