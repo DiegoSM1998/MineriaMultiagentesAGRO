@@ -1,4 +1,4 @@
-## ___Instrucciones___
+##    Instrucciones
 ### 1º. Ejecutar docker-Desktop
 ### 2º. lanzar servidor: docker compose -f .\docker_compose.yml up 
 ### Ahora puedes accedr a las funciones o modificarlas en los ".py" de cada carpeta, siendo estas:
