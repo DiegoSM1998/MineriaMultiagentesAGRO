@@ -13,7 +13,7 @@ from sqlalchemy import create_engine
 
 engine = create_engine("postgresql://docker:docker@host.docker.internal/AGROdb")
 
-query = '''SELECT * FROM "dataModel.processed"'''
+query = '''SELECT * FROM "Dataset1.V1_2018-20.processed"'''
 df =pd.read_sql(query, engine)
 
 print(df)
