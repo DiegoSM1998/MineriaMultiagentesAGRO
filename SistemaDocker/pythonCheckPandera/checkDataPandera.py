@@ -31,9 +31,9 @@ def chooseTable():
 
 engine = create_engine("postgresql://docker:docker@host.docker.internal/AGROdb")
 print("Comprobación de calidad de tablas, escoja una de las siguientes:")
-tabla = chooseTable()
-query = '''SELECT * FROM "'''+tabla+'''"'''
-df =pd.read_sql(query, engine)
+Tabla = chooseTable()
+Query = '''SELECT * FROM "'''+Tabla+'''"'''
+df =pd.read_sql(Query, engine)
 
 meses = ['Enero', 'Febrero', 'Marzo', 'Abril' , 'Mayo' , 'Junio', 'Julio',
          'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
