@@ -8,3 +8,4 @@
 ### 3.- Limpiar raw data que se encuentra en postgresql y volver a subirlos ya procesados (Entrar en el fichero ./pythonLimpiarData y seguir instrucciones)
 ### 4.- Comprobar la calidad de los datos de las tablas en la base de datos (Entrar en el fichero ./pythonLimpiarData y seguir instrucciones)
 ### 5.- Usar el modelo de regresión lineal (Entrar en el fichero ./modelo y seguir instrucciones)
+![Diagrama](https://github.com/zzuljs/CppLearning/blob/master/CppLearning/raw/master/Itachi.jpg)
