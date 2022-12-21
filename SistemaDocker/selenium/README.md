@@ -1,6 +1,7 @@
 ### Para crear la imagen y lanzarla:
 ### docker build -t selenium .
 ### docker run -it selenium  
+_________________________________________________________________________________________________________________________________________________________________________
 
 ### Esta imagen te permitira ampliar la base de datos y subir las tablas directamente a postgresql
 ### -Dockerfile recoge los parametros necesarios para crear la imagen con el codigo python y su respectivo entorno
