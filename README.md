@@ -1,4 +1,4 @@
-# MineriaMultiagentesAGRO
+# Mineria-Multiagentes_Proyecto:_AGRO_
 
 ## Hipótesis:
 
