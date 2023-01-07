@@ -1,7 +1,4 @@
-#!/usr/bin/python3
-# -- coding: utf-8 --
-'''Limpieza pandas postgresql'''
-
+## Run selenium and chrome driver to scrape data
 import time
 import os.path
 from os import remove
@@ -66,12 +63,12 @@ if __name__ == "__main__":
             sleep(0.25)
 
 def guardarData(productos, datosTropel, fecha, ccaa, desde):
-    x=7
+    x=6
     nombrefichero='Dataset1.1.-DatosConsumoAlimentario_'+str(desde)+'-2020.txt'
     f = open(nombrefichero, 'a')
     if os.stat(nombrefichero).st_size == 0:
         f.write("Año|Mes|CCAA|Producto")
-        for i in range(x-7,x):
+        for i in range(x-6,x):
             f.write(datosTropel[i]+"|")
         f.write("|\n")
     x+=6
@@ -133,15 +130,6 @@ def lanzarSelenium(periodoSeleccionado,comunidadesSeleccionado,desde):
     datosTropel=[]
     for volumen in datosCols:
         datosTropel.append(volumen.text)
-
-    # x=6
-    # productos=productos[3:]
-    # for producto in productos:
-    #     print(producto)
-    #     for i in range(x-6,x):
-    #         print(datosTropel[i])
-    #     x+=6
-    #     print("\n")
 
     guardarData(productos,datosTropel, fecha, ccaa,desde)
 
