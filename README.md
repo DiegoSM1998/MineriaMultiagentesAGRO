@@ -2,7 +2,7 @@
 
 ## Hipótesis:
 
-  1ª. La pandemia por la covid-19 provocó escasez de verduras y hortalizas en puntos clave de la pandemia.
+  1ª. La pandemia por la covid-19 provocó escasez de frutas y hortalizas durante dicha pandemia.
 
   2ª. Durante la pandemia los precios de las verduras y hortalizas se vieron afectados por las olas.
 
