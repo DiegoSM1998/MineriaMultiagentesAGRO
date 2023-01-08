@@ -64,7 +64,7 @@ if __name__ == "__main__":
 
 def guardarData(productos, datosTropel, fecha, ccaa, desde):
     x=7
-    nombrefichero='Dataset1.1.-DatosConsumoAlimentario_'+str(desde)+'-2020.txt'
+    nombrefichero='Dataset1.1.-DCA_PatatasYHortalizas_'+str(desde)+'-2020.txt'
     f = open(nombrefichero, 'a')
     if os.stat(nombrefichero).st_size == 0:
         f.write("Año|Mes|CCAA|Producto")
@@ -112,7 +112,7 @@ def lanzarSelenium(periodoSeleccionado,desde):
     grupoProductos= browser.find_element(By.XPATH, '''//select[@name="grupo"]''')
     opcionesProductos=grupoProductos.find_elements(By.TAG_NAME,"option")
     for option in opcionesProductos:
-        if("20" == option.get_attribute("value")):
+        if("16" == option.get_attribute("value")):
             option.click()
 
     periodo= browser.find_element(By.XPATH, '''//select[@name="periodo"]''')
