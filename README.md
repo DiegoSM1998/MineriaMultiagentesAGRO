@@ -11,4 +11,4 @@
   4ª. En las comunidades donde es rica la ingesta de verduras y frutas hubo una menor tasa de mortalidad por covid. 
   
   
-  Entrega 2:https://docs.google.com/document/d/1bCFaa0zZXD2eQbbQ3_gkcq5iL97n-F_WMWl0Ljdnee8/edit
+  Entrega final:https://docs.google.com/document/d/1389URLhIH7U6g9kOdnaxlLS3sY0Ym0B_QZWhDhC0B0g/edit
