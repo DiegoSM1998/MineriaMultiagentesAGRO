@@ -14,7 +14,7 @@
   4ª. En las comunidades donde es rica la ingesta de verduras y frutas hubo una menor tasa de mortalidad por covid. 
   ![Entorno trabajo Hipotesis 4](https://github.com/DiegoSM1998/MineriaMultiagentesAGRO/tree/main/Hipotesis4)
   
- ![Enrega Final](https://github.com/DiegoSM1998/MineriaMultiagentesAGRO/tree/main/)
+ ![Enrega Final](https://github.com/DiegoSM1998/MineriaMultiagentesAGRO/blob/main/Memoria%20Entrega%20Final.pdf)
 _________________________________________________________________________________________________________________________________________________________________________
 
 En la carpeta ![Sistema Docker](https://github.com/DiegoSM1998/MineriaMultiagentesAGRO/tree/main/SistemaDocker) se encuentra el trabajo de la asignatura Sistemas Multiagentes que contiene el sistema empaquetado en diferentes docker donde cada uno representa una de las partes del trabajo de Mineria de Datos, tienen competa funcionalidad aunque finalmente no se opto por no usarlo para la entrega final de Mineria de Datos.
