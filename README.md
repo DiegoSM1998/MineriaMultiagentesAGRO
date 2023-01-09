@@ -9,7 +9,7 @@
   ![Entorno trabajo Hipotesis 2](https://github.com/DiegoSM1998/MineriaMultiagentesAGRO/tree/main/Hipotesis%202)
 
   3ª. Los super alimentos han influido en la reducción de mortalidad por la covid-19 durante las olas.
-  ![Entorno trabajo Hipotesis 3](https://github.com/DiegoSM1998/MineriaMultiagentesAGRO/tree/main/Hipotesis 3)
+  ![Entorno trabajo Hipotesis 3](https://github.com/DiegoSM1998/MineriaMultiagentesAGRO/tree/main/Hipotesis%203)
 
   4ª. En las comunidades donde es rica la ingesta de verduras y frutas hubo una menor tasa de mortalidad por covid. 
   ![Entorno trabajo Hipotesis 4](https://github.com/DiegoSM1998/MineriaMultiagentesAGRO/tree/main/Hipotesis4)
