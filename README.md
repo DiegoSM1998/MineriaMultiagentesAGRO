@@ -6,7 +6,7 @@
   ![Entorno trabajo Hipotesis 1](https://github.com/DiegoSM1998/MineriaMultiagentesAGRO/tree/main/Hipotesis1)
 
   2ª. Durante la pandemia los precios de las verduras y hortalizas se vieron afectados por las olas.
-  ![Entorno trabajo Hipotesis 2](https://github.com/DiegoSM1998/MineriaMultiagentesAGRO/tree/main/Hipotesis 2)
+  ![Entorno trabajo Hipotesis 2](https://github.com/DiegoSM1998/MineriaMultiagentesAGRO/tree/main/Hipotesis%202)
 
   3ª. Los super alimentos han influido en la reducción de mortalidad por la covid-19 durante las olas.
   ![Entorno trabajo Hipotesis 3](https://github.com/DiegoSM1998/MineriaMultiagentesAGRO/tree/main/Hipotesis 3)
